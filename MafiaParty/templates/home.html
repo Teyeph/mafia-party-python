@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Mafia Party</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Mafia Party</h1>
+
+        {% if form %}
+        <form>
+            <div>
+                {{ form.nickname.label }}
+                {{ form.nickname }}
+            </div>
+            <div>
+                <p>
+                    {{ form.room_code.label }}
+                    {{ form.room_code }}
+                    {{ form.join_button }}
+                </p>
+                <p>
+                    or
+                </p>
+                <p>
+                    {{ form.create_button }}
+                </p>
+            </div>
+            {{ form.csrf_token }}
+        </form>
+        {% endif %}
+
+    </div>
+</body>
+</html>
